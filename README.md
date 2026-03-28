@@ -11,7 +11,7 @@ Instead of only asking **“Are traders better in Fear or Greed?”**, it builds
 
 ## Data Used
 - `historical_data.csv` — Hyperliquid trade history
-- `Pasted text.txt` — Fear & Greed dataset
+- `Fear_Greed_Index.csv` — Fear & Greed dataset
 
 ## What makes this submission stronger
 1. It goes beyond descriptive charts and introduces a reusable **trader segmentation framework**.
