@@ -1,0 +1,119 @@
+{
+  "project": "Sentiment-Conditioned Trader DNA",
+  "data_health": {
+    "trade_rows": 211224,
+    "sentiment_days": 2644,
+    "matched_trade_rows": 211224,
+    "wallets": 32,
+    "coins": 246,
+    "trade_date_range": [
+      "2023-05-01",
+      "2025-05-01"
+    ],
+    "note": "The uploaded trade CSV does not contain an explicit leverage column, so notional size and start position were used as exposure context instead."
+  },
+  "headline_findings": [
+    {
+      "title": "Euphoria was the richest regime per trade, but fear generated the most total profit.",
+      "detail": "Extreme Greed had the highest average realized PnL per closing trade ($130.21) and average ROI (7.67%), while Fear produced the largest total realized PnL ($3,357,155) because more trades were closed there."
+    },
+    {
+      "title": "The best desks were often contrarian, not trend-chasing.",
+      "detail": "Short-side closes in Extreme Greed generated $2,526,106 at 9.75% average ROI, versus $189,065 and 3.08% for longs."
+    },
+    {
+      "title": "Regime shifts mattered more than static sentiment.",
+      "detail": "Fear -> Greed days delivered the highest average daily realized PnL among transitions with at least 2 observations ($208,554/day)."
+    }
+  ],
+  "wallet_archetypes": [
+    {
+      "cluster_label": "Diversified Alpha Scalers",
+      "traders": 7,
+      "avg_wallet_pnl": 543848.8717,
+      "avg_trades": 8077.7143,
+      "avg_win_rate": 0.7973,
+      "avg_roi": 0.0552,
+      "avg_short_share": 0.5629,
+      "avg_coins": 66.5714
+    },
+    {
+      "cluster_label": "Volume-First Short Specialists",
+      "traders": 7,
+      "avg_wallet_pnl": 420569.4255,
+      "avg_trades": 4718.4286,
+      "avg_win_rate": 0.9013,
+      "avg_roi": 0.0141,
+      "avg_short_share": 0.8436,
+      "avg_coins": 7.5714
+    },
+    {
+      "cluster_label": "Opportunistic Swing Traders",
+      "traders": 12,
+      "avg_wallet_pnl": 215382.653,
+      "avg_trades": 1089.25,
+      "avg_win_rate": 0.7821,
+      "avg_roi": -0.0074,
+      "avg_short_share": 0.4511,
+      "avg_coins": 12.0
+    },
+    {
+      "cluster_label": "Precision Snipers",
+      "traders": 6,
+      "avg_wallet_pnl": 153161.1721,
+      "avg_trades": 293.0,
+      "avg_win_rate": 0.9876,
+      "avg_roi": 0.3282,
+      "avg_short_share": 0.8198,
+      "avg_coins": 8.5
+    }
+  ],
+  "top_antifragile_wallets": [
+    {
+      "Account": "0xbd5fead7180a9c139fa51a103cb6a2ce86ddb5c3",
+      "total_pnl": 220519.0619,
+      "fear_bucket_pnl": 274510.2511,
+      "greed_bucket_pnl": 36311.3644,
+      "antifragility_score": 1.0802,
+      "short_share": 0.3849
+    },
+    {
+      "Account": "0xbaaaf6571ab7d571043ff1e313a9609a10637864",
+      "total_pnl": 940163.8062,
+      "fear_bucket_pnl": 882790.3536,
+      "greed_bucket_pnl": 4.6725,
+      "antifragility_score": 0.939,
+      "short_share": 1.0
+    },
+    {
+      "Account": "0x72c6a4624e1dffa724e6d00d64ceae698af892a0",
+      "total_pnl": 360539.51,
+      "fear_bucket_pnl": 343414.9062,
+      "greed_bucket_pnl": 21651.3023,
+      "antifragility_score": 0.8925,
+      "short_share": 0.1129
+    },
+    {
+      "Account": "0xb899e522b5715391ae1d4f137653e7906c5e2115",
+      "total_pnl": 22488.5008,
+      "fear_bucket_pnl": 18470.5519,
+      "greed_bucket_pnl": 0.0,
+      "antifragility_score": 0.8213,
+      "short_share": 0.6251
+    },
+    {
+      "Account": "0xaf40fdc468c30116bd3307bcbf4a451a7ebf1deb",
+      "total_pnl": 21758.8318,
+      "fear_bucket_pnl": 14542.7029,
+      "greed_bucket_pnl": 58.4452,
+      "antifragility_score": 0.6657,
+      "short_share": 1.0
+    }
+  ],
+  "strategy_takeaways": [
+    "Treat extreme greed as a potential fade zone: in this sample, short books monetized euphoria better than longs.",
+    "Fear was not a pure risk-off regime. It produced the largest absolute profit pool, suggesting distressed volatility created large closing opportunities.",
+    "Segment wallets before copying them. Some profitable wallets were diversified alpha scalers, while others were precision snipers with tiny capital and very sparse activity.",
+    "If deploying a live strategy, use sentiment transitions as triggers rather than sentiment level alone."
+  ]
+}
